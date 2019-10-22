@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    color: #707070;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    margin-top: 8%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 10vh;
+}
+
+.left-dash {
+    width: 3.75rem;
+    height: 2px;
+    background: #707070;
+    margin: 1.5em;
+}
+
+.right-dash {
+    width: 3.75rem;
+    height: 2px;
+    background: #707070;
+    margin: 1.5em;
+}
+
+.card-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 3rem;
+}
+
+.card-box {
+    height: 310px;
+    width: 278px;
+    background-color: #707070;
+    margin: 1em;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.card-box-label {
+    width: 100%;
+    height: 126px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.label-text-container {
+    margin: 1.75rem;
+}
+
+button {
+    font-size: 1.5rem;
+    margin: 1em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.button-view {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    width: 18rem;
+    height: 3rem;
+}
+
+.button-start {
+    background: #707070 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    color: white;
+    width: 14.5rem;
+    height: 3rem;
+}
+@media (max-width: 640px){
+    .header-container {
+        justify-content: flex-start;
+        font-size: 1rem;
+        margin-left: 5%
+    }
+
+    .left-dash {
+        display: none;
+    }
+    .card-container {
+        margin-top: 1.5em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-box {
+        height: 184px;
+        width: 90%;
+        background-color: #707070;
+        margin: 1.75em;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: 1fr 2fr [label];
+        grid-template-rows: 100%;
+        border: 1px solid #707070;
+    }
+
+
+    .card-box-label {
+        grid-column: 2 / 4;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0px 8px 8px 0px;
+        height: 100%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+    }
+
+    .label-text-container {
+        margin: 1em;
+    }
+   
+    .button-container{
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .button-view{
+        width: 90%;
+    }
+}
