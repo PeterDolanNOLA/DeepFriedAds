@@ -60,13 +60,13 @@ const obj = {
       let labelText = document.createElement("h2");
       labelTextNode = document.createTextNode(card.title);
       labelText.appendChild(labelTextNode);
-
-      linkBox.appendChild(labelText);
+  
+      labelContainerDiv.appendChild(labelText);
     
-      labelContainerDiv.appendChild(linkBox);
       cardBoxLabelDiv.appendChild(labelContainerDiv);
       cardBoxDiv.appendChild(cardBoxLabelDiv);
       
-      container.appendChild(cardBoxDiv);
+      linkBox.appendChild(cardBoxDiv)
+      container.appendChild(linkBox);
 
   })
