@@ -41,6 +41,7 @@ header {
    justify-content: center;
    margin-top: 3rem;
    flex-wrap: wrap;
+   width: 95%;
 }
 
 .card-box {
