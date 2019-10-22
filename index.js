@@ -44,7 +44,8 @@ const obj = {
      cardBoxDiv.classList.add('card-box');
      if(card.image.length > 1){
          cardBoxDiv.style.background = `url(${card.image})`;
-         cardBoxDiv.style.backgroundSize = "100% 60%";
+         cardBoxDiv.style.backgroundSize = "cover";
+         cardBoxDiv.style.backgroundRepeat = "no-repeat";
      }
      
       let cardBoxLabelDiv = document.createElement("div");
