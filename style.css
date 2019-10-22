@@ -40,6 +40,7 @@ header {
    display: flex;
    justify-content: center;
    margin-top: 3rem;
+   flex-wrap: wrap;
 }
 
 .card-box {
@@ -103,7 +104,7 @@ button {
     .left-dash {
         display: none;
     }
-    
+
     #card-container {
         margin-top: 1.5em;
         flex-direction: column;

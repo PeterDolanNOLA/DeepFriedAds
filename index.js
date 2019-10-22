@@ -38,10 +38,14 @@ const obj = {
 
  let cards = obj["jrDeveloper"]["cardGroups"];
 
+ let container = document.getElementById('card-container');
  cards.forEach((card)=> {
      let cardBoxDiv = document.createElement("div");
      cardBoxDiv.classList.add('card-box');
-     
+     if(card.image.length > 1){
+         cardBoxDiv.style.background = `url(${card.image})`;
+         cardBoxDiv.style.backgroundSize = "100% 60%";
+     }
      
       let cardBoxLabelDiv = document.createElement("div");
       cardBoxLabelDiv.classList.add('card-box-label');
@@ -49,14 +53,19 @@ const obj = {
       let labelContainerDiv = document.createElement("div");
       labelContainerDiv.classList.add('label-text-container');
 
+      let linkBox = document.createElement("a");
+      linkBox.setAttribute('href', card.link);
+
       let labelText = document.createElement("h2");
       labelTextNode = document.createTextNode(card.title);
       labelText.appendChild(labelTextNode);
-      labelContainerDiv.appendChild(labelText);
+
+      linkBox.appendChild(labelText);
+    
+      labelContainerDiv.appendChild(linkBox);
       cardBoxLabelDiv.appendChild(labelContainerDiv);
       cardBoxDiv.appendChild(cardBoxLabelDiv);
-      let container = document.getElementById('card-container');
-      console.log(container);
-    
+      
+      container.appendChild(cardBoxDiv);
 
   })
